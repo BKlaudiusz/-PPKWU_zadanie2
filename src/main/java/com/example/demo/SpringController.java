@@ -14,7 +14,7 @@ public class SpringController {
     public HashMap<String, Object> checkString(@RequestParam("stringToCheck") String stringToCheck) {
 
         HashMap<String, Object> map = new HashMap<>();
-        if(stringToCheck==null)
+        if(stringToCheck.length()==0)
         {
             map.put("message","Problems parsing JSON");
             return map;
