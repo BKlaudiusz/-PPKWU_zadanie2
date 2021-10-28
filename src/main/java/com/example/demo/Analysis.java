@@ -6,12 +6,15 @@ public class Analysis {
     private long lowerCase;
     private long countNumber;
     private long specialMarks;
+    private boolean hasCombination;
 
     public Analysis(String stringToCheck) {
         this.stringToCheck = stringToCheck;
         this.countUpperCase();
         this.countLowerCase();
         this.countNumberCase();
+        this.countspecialMarksCase();
+        this.hasCombination();
     }
     private void countUpperCase() {
         upperCase = stringToCheck.chars().filter((s)->Character.isUpperCase(s)).count();
@@ -31,5 +34,20 @@ public class Analysis {
             }
         }
     }
+    private  void hasCombination()
+    {
+        hasCombination = specialMarks!=0 && upperCase!=0 && lowerCase!=0 && countNumber!=0;
+    }
 
+    @Override
+    public String toString() {
+        return "Analysis{" +
+                "upperCase=" + upperCase +
+                ", stringToCheck='" + stringToCheck + '\'' +
+                ", lowerCase=" + lowerCase +
+                ", countNumber=" + countNumber +
+                ", specialMarks=" + specialMarks +
+                ", hasCombination=" + hasCombination +
+                '}';
+    }
 }
