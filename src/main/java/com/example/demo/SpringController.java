@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class SpringController {
 
     @GetMapping(value="/checkString")
-    public String checkString(@RequestParam("stringToCheck") String stringToCheck){
-        return "";
+    public Analysis checkString(@RequestParam("stringToCheck") String stringToCheck){
+        Analysis analysis = new Analysis(stringToCheck);
+        return analysis;
     }
 }
