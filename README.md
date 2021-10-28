@@ -20,7 +20,7 @@
       "hasCombination"false
       }
       
-### Request
+### Errors
 
 ` Sending invalid JSON will result in a 400 Bad Request response.`
 
