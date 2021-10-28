@@ -17,7 +17,7 @@
     Content-Type: application/json
     Content-Length: 2
 
-      {
+     analysis{
       "lowerChar":4,
       "UpperChar":1,
       "numbers":5,
