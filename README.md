@@ -10,12 +10,7 @@
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
+    HTTP/1.2 200 OK
 
      analysis{
       "lowerChar":4,
@@ -24,3 +19,12 @@
       "specialMarks":0
       "hasCombination"false
       }
+      
+### Request
+
+` Sending invalid JSON will result in a 400 Bad Request response.`
+
+    HTTP/2 400
+    Content-Length: 35
+    {"message":"Problems parsing JSON"}
+     
